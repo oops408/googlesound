@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Google Sound</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <a href="#"><img src="pic/icon.png", width="100px" alt=""></a>
+            <p class="top">Google Sound</p>
+            <a href="#">
+            <button class="loginbtn">Login</button>
+            </a>
+            <a href="#">
+            <button class="regisbtn">Register</button>
+            </a>
+        </header>
+        <body>
+            <div class="upload">
+                <h3>Upload File here: </h3>
+                <form enctype = "multipart/form-data" action = "ocr.py" method = "post"></form>
+                <p><input type = "file" name = "filename" /></p>
+                <p><input type = "submit" value = "Upload" /></p>
+            </form>
+            </div>
+
+            <section class="wrap">
+                <table class="table">
+                    <tr>
+                        <th>Bookname</th>
+                        <th>Original PDF</th>
+                        <th>MP3 Voiceover</th>
+                        <th>Summary Transcript</th>
+                        <th>Summary Voiceover</th>
+                        <th>Upload Date</th>
+                        <th>Uploaded By</th>
+                    </tr>
+                    <tr>
+                        <td>Book Name 1</td>
+                        <td>Book.pfd</td>
+                        <td><a href="">Download</a></td>
+                        <td><a href="">Download</a></td>
+                        <td><a href="">Download</a></td>
+                        <td>10/21/2023 <br> 11.03 a.m</td>
+                        <td>dev</td>
+                    </tr>
+                </table>
+            </section>
+        </body>
+        <footer class="w3-center w3w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+            <a href="#home" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+              <i class="fa fa-facebook w3-hover-opacity"></i>
+              <i class="fa fa-instagram w3-hover-opacity"></i>
+              <i class="fa fa-snapchat w3-hover-opacity"></i>
+              <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+              <i class="fa fa-twitter w3-hover-opacity"></i>
+              <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Created by <a href="https://github.com/oops408" title="Google Sound" target="_blank" class="w3-hover-text-red">Suparn, Kendrew, Benjamin</a></p>
+          </footer>
+
+          <script>
+            // Used w3schools tutorial for help with this.
+            function onClick(element) {
+              document.getElementById("img01").src = element.src;
+              document.getElementById("modal01").style.display = "block";
+              var captionText = document.getElementById("caption");
+              captionText.innerHTML = element.alt;
+            }
+    
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var navbar = document.getElementById("navbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                }
+            }
+    
+            function toggleFunction() {
+                var x = document.getElementById("navMobile");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            </script>
+    </body>
+</html>
